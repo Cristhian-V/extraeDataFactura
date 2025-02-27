@@ -1,42 +1,152 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+}
+
+.file-processor-container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+.header {
+  margin-bottom: 30px;
+  text-align: center; /* Asegura que el texto del encabezado esté centrado */
+}
+
+.header h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.upload-area {
+  border: 2px dashed #3498db;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto 30px auto; /* Centra el área de carga */
+  background-color: #f7fbff;
+}
+
+.upload-area:hover {
+  border-color: #2980b9;
+  background-color: #eaf6ff;
+}
+
+.upload-icon {
+  color: #3498db;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centra el ícono SVG */
+}
+
+.drag-text {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 16px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.file-label {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 auto; /* Centra el botón */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.file-label:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-input {
+  display: none;
+}
+
+.instructions {
+  text-align: left;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  max-width: 600px;
+  margin: 0 auto; /* Centra las instrucciones */
+}
+
+.instructions h3 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center; /* Centra el título de instrucciones */
+}
+
+.instructions ol {
+  padding-left: 20px;
+  width: fit-content;
+  margin: 0 auto; /* Centra la lista ordenada */
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .file-processor-container {
+    padding: 20px;
+    margin: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header h1 {
+    font-size: 24px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .upload-area {
+    padding: 25px 15px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .instructions {
+    max-width: 100%;
+  }
 }
